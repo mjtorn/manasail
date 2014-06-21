@@ -37,6 +37,7 @@ var ManaSail = (function(formats, data) {
             console.error("Unknown game type", gameFormat);
             return;
         }
+        data.counts['land'] = data.format['dflLandCount'];
     }
     function getGameFormat() {
         return data.format;
