@@ -89,9 +89,11 @@ var ManaSail = (function(formats, data) {
                 symbolCount += data.counts[key];
             }
         }
-        if (symbolCount > 0) {
-            for (key in data.manaBase) {
+        for (key in data.manaBase) {
+            if (symbolCount > 0) {
                 data.manaBase[key] = data.counts[key] * data.counts['land'] / symbolCount;
+            } else {
+                data.manaBase[key] = 0;
             }
         }
     }
