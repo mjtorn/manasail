@@ -28,7 +28,7 @@ Page {
         Column {
             id: calcColumn
             width: calcPage.width
-            spacing: Theme.paddingLarge
+            spacing: Theme.paddingSmall
 
             PageHeader {
                 title: qsTr("Calculate mana base")
