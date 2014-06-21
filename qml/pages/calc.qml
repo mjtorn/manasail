@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-import "../manasail.js" as MSail
+import "../js/manasail.js" as MSail
 
 Page {
     id: calcPage
