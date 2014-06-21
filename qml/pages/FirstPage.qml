@@ -62,7 +62,7 @@ Page {
                 title: qsTr("ManaSail")
             }
             Label {
-                x: Theme.paddingLarge
+                anchors.horizontalCenter: parent.horizontalCenter
                 text: qsTr("Select game format")
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontFamilyHeading
@@ -70,7 +70,7 @@ Page {
 
             Button {
                 id: btnLimited
-                x: Theme.paddingLarge
+                anchors.horizontalCenter: parent.horizontalCenter
                 text: qsTr("Limited")
                 onClicked: {
                     MSail.ManaSail.setGameFormat("limited");
@@ -79,7 +79,7 @@ Page {
             }
             Button {
                 id: btnConstructed
-                x: Theme.paddingLarge
+                anchors.horizontalCenter: parent.horizontalCenter
                 text: qsTr("Constructed")
                 onClicked: {
                     MSail.ManaSail.setGameFormat("constructed");
