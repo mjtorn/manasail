@@ -33,26 +33,24 @@ import Sailfish.Silica 1.0
 
 
 Page {
-    id: page
-    SilicaListView {
-        id: listView
-        model: 20
-        anchors.fill: parent
-        header: PageHeader {
-            title: qsTr("Nested Page")
-        }
-        delegate: BackgroundItem {
-            id: delegate
+    id: about
 
+    SilicaFlickable {
+        anchors.fill: parent
+        contentHeight: column.height
+
+        Column {
+            id: column
+            PageHeader {
+                title: qsTr("ManaSail")
+            }
             Label {
                 x: Theme.paddingLarge
-                text: "Item " + index
-                anchors.verticalCenter: parent.verticalCenter
-                color: delegate.highlighted ? Theme.highlightColor : Theme.primaryColor
+                text: qsTr("Mana calculator\n\nmjt@fadconsulting.com")
+                color: Theme.secondaryHighlightColor
+                font.pixelSize: Theme.fontSizeExtraLarge
             }
-            onClicked: console.log("Clicked " + index)
         }
-        VerticalScrollDecorator {}
     }
 }
 
