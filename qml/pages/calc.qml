@@ -132,8 +132,10 @@ Page {
     Label {
         id: summary
         width: calcPage.width
+        anchors.left: parent.left
+        anchors.leftMargin: Theme.paddingLarge * 2
         anchors.bottom: parent.bottom
-        x: Theme.paddingLarge * 2
+        anchors.bottomMargin: Theme.paddingLarge
     }
 
     Component.onCompleted: MSail.ManaSail.display(summary);
