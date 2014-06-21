@@ -47,7 +47,7 @@ Page {
                 stepSize: 1
                 minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
                 maximumValue: MSail.ManaSail.getGameFormat()['maxLandCount']
-                value: MSail.ManaSail.getGameFormat()['dflLandCount']
+                value: 0
                 valueText: value
                 onReleased: {
                     MSail.ManaSail.setCount('white', value);
@@ -63,7 +63,7 @@ Page {
                 stepSize: 1
                 minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
                 maximumValue: MSail.ManaSail.getGameFormat()['maxLandCount']
-                value: MSail.ManaSail.getGameFormat()['dflLandCount']
+                value: 0
                 valueText: value
                 onReleased: {
                     MSail.ManaSail.setCount('red', value);
@@ -79,7 +79,7 @@ Page {
                 stepSize: 1
                 minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
                 maximumValue: MSail.ManaSail.getGameFormat()['maxLandCount']
-                value: MSail.ManaSail.getGameFormat()['dflLandCount']
+                value: 0
                 valueText: value
                 onReleased: {
                     MSail.ManaSail.setCount('green', value);
@@ -95,7 +95,7 @@ Page {
                 stepSize: 1
                 minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
                 maximumValue: MSail.ManaSail.getGameFormat()['maxLandCount']
-                value: MSail.ManaSail.getGameFormat()['dflLandCount']
+                value: 0
                 valueText: value
                 onReleased: {
                     MSail.ManaSail.setCount('blue', value);
@@ -111,7 +111,7 @@ Page {
                 stepSize: 1
                 minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
                 maximumValue: MSail.ManaSail.getGameFormat()['maxLandCount']
-                value: MSail.ManaSail.getGameFormat()['dflLandCount']
+                value: 0
                 valueText: value
                 onReleased: {
                     MSail.ManaSail.setCount('black', value);
