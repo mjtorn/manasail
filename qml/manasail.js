@@ -1,12 +1,36 @@
-/*
- * Set the game type
- */
-function setGameType(gameType) {
-    if (gameType == "limited") {
-        console.log("ltd");
-    } else if (gameType == "constructed") {
-        console.log("ltd");
-    } else {
-        console.error("Unknown game type", gameType);
+// Easily tweak the values up here
+var gameFormats = {
+    "limited": {
+        'minLandCount': 0,
+        'maxLandCount': 20,
+        'dflLandCount': 17
+    },
+    "constructed": {
+        'minLandCount': 0,
+        'maxLandCount': 30,
+        'dflLandCount': 24
     }
 }
+
+// Actually runs the deal
+var ManaSail = (function(formats, data) {
+    data.formats = formats;
+    data.format = {
+        'minLandCount': null,
+        'maxLandCount': null,
+        'dflLandCount': null
+    }
+
+    function setGameFormat(gameFormat) {
+        data.format = data.formats[gameFormat];
+        if (data.format == null) {
+            console.error("Unknown game type", gameFormat);
+            return;
+        }
+    }
+
+    return {
+        'setGameFormat': setGameFormat
+    }
+}(gameFormats, {})); // Cannot assign to global scope so pass an array
+
