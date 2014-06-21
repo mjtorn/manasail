@@ -19,7 +19,7 @@ Page {
         anchors.bottomMargin: Theme.paddingLarge
         clip: true
 
-        ScrollDecorator {
+        VerticalScrollDecorator {
             flickable: calcFlickable
         }
 
