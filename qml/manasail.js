@@ -31,6 +31,14 @@ var ManaSail = (function(formats, data) {
         'black': 0
     }
 
+    data.manaBase = {
+        'white': 0,
+        'red': 0,
+        'green': 0,
+        'blue': 0,
+        'black': 0
+    }
+
     function setGameFormat(gameFormat) {
         data.format = data.formats[gameFormat];
         if (data.format == null) {
@@ -50,20 +58,30 @@ var ManaSail = (function(formats, data) {
         return data.counts;
     }
 
-    // TODO: Do something
     function calculate() {
-    }
-
-    // TODO: Display mana base, not counts
-    function display(label) {
-        var s = '';
+        var symbolCount = 0;
         var key = null;
-        var val = null;
         for (key in data.counts) {
             if (key != 'land') {
-                val = data.counts[key];
-                s += key + ': ' + val + '\n';
+                symbolCount += data.counts[key];
             }
+        }
+        for (key in data.counts) {
+            if (key != 'land') {
+                data.manaBase[key] = data.counts[key] * data.counts['land'] / symbolCount;
+            }
+        }
+    }
+
+    function display(label) {
+        var s = '';
+        var dispKey = null;
+        var key = null;
+        var val = null;
+        for (key in data.manaBase) {
+            val = data.manaBase[key];
+            dispKey = key[0].toUpperCase() + key.slice(1, key.length);
+            s += dispKey + ': ' + Math.round(val) + ' (' + val + ')' + '\n';
         }
 
         label.text = s;
