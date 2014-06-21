@@ -19,12 +19,13 @@ SOURCES += src/manasail.cpp
 OTHER_FILES += qml/manasail.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/manasail.changes.in \
     rpm/manasail.spec \
     rpm/manasail.yaml \
     translations/*.ts \
-    manasail.desktop
+    manasail.desktop \
+    qml/pages/about.qml \
+    qml/manasail.js
 
 # to disable building translations every time, comment out the
 # following CONFIG line
