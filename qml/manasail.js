@@ -104,7 +104,7 @@ var ManaSail = (function(formats, data) {
     }
 
     function coverText() {
-        var s = '';
+        var s = 'ManaSail\n\n';
         var dispKey = null;
         var key = null;
         var val = null;
