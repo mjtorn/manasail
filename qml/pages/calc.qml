@@ -77,7 +77,7 @@ Page {
 
                 Slider {
                     id: whiteSlider
-                    label: qsTr("White count")
+                    label: qsTr("White mana symbols")
                     width: calcColumn.width - landPlus5.width - Theme.paddingLarge
                     stepSize: 1
                     minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
@@ -108,7 +108,7 @@ Page {
 
                 Slider {
                     id: redSlider
-                    label: qsTr("Red count")
+                    label: qsTr("Red mana symbols")
                     width: calcColumn.width - landPlus5.width - Theme.paddingLarge
                     stepSize: 1
                     minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
@@ -139,7 +139,7 @@ Page {
 
                 Slider {
                     id: greenSlider
-                    label: qsTr("Green count")
+                    label: qsTr("Green mana symbols")
                     width: calcColumn.width - landPlus5.width - Theme.paddingLarge
                     stepSize: 1
                     minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
@@ -170,7 +170,7 @@ Page {
 
                 Slider {
                     id: blueSlider
-                    label: qsTr("Blue count")
+                    label: qsTr("Blue mana symbols")
                     width: calcColumn.width - landPlus5.width - Theme.paddingLarge
                     stepSize: 1
                     minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
@@ -201,7 +201,7 @@ Page {
 
                 Slider {
                     id: blackSlider
-                    label: qsTr("Black count")
+                    label: qsTr("Black mana symbols")
                     width: calcColumn.width - landPlus5.width - Theme.paddingLarge
                     stepSize: 1
                     minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
