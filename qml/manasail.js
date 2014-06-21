@@ -81,7 +81,7 @@ var ManaSail = (function(formats, data) {
         for (key in data.manaBase) {
             val = data.manaBase[key];
             dispKey = key[0].toUpperCase() + key.slice(1, key.length);
-            s += dispKey + ': ' + Math.round(val) + ' (' + val + ')' + '\n';
+            s += dispKey + ': ' + Math.round(val) + ' (' + val.toFixed(2) + ')' + '\n';
         }
 
         label.text = s;
