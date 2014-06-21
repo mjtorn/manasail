@@ -25,7 +25,8 @@ OTHER_FILES += qml/manasail.qml \
     translations/*.ts \
     manasail.desktop \
     qml/pages/about.qml \
-    qml/manasail.js
+    qml/manasail.js \
+    qml/pages/calc.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
