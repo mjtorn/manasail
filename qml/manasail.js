@@ -103,6 +103,25 @@ var ManaSail = (function(formats, data) {
         label.text = s;
     }
 
+    function coverText() {
+        var s = '';
+        var dispKey = null;
+        var key = null;
+        var val = null;
+        for (key in data.manaBase) {
+            val = data.manaBase[key];
+            if (key == 'blue') {
+                dispKey = 'U';
+            } else {
+                dispKey = key[0].toUpperCase();
+            }
+
+            s += dispKey + ': ' + Math.round(val) + '\n';
+        }
+
+        return s;
+    }
+
     return {
         'resetStates': resetStates,
         'setGameFormat': setGameFormat,
@@ -111,6 +130,7 @@ var ManaSail = (function(formats, data) {
         'getCounts': getCounts,
         'calculate': calculate,
         'display': display,
+        'coverText': coverText,
     }
 }(gameFormats, {})); // Cannot assign to global scope so pass an array
 
