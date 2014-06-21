@@ -1,3 +1,5 @@
+.pragma library
+
 // Easily tweak the values up here
 var gameFormats = {
     "limited": {
