@@ -36,19 +36,34 @@ Page {
     id: about
 
     SilicaFlickable {
-        anchors.fill: parent
-        contentHeight: column.height
 
         Column {
             id: column
+            width: about.width
+            spacing: Theme.paddingLarge
+
             PageHeader {
-                title: qsTr("ManaSail")
+                title: qsTr("ManaSail 1.0")
             }
             Label {
-                x: Theme.paddingLarge
-                text: qsTr("Mana calculator\n\nmjt@fadconsulting.com")
-                color: Theme.secondaryHighlightColor
+                anchors.horizontalCenter: parent.horizontalCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
+                text: "Magic: The Gathering"
+            }
+            Label {
+                anchors.horizontalCenter: parent.horizontalCenter
+                font.pixelSize: Theme.fontSizeExtraLarge
+                text: qsTr("mana calculator")
+            }
+            Label {
+                anchors.horizontalCenter: parent.horizontalCenter
+                font.pixelSize: Theme.fontSizeLarge
+                text: qsTr("mjt@nysv.org")
+            }
+            Label {
+                anchors.horizontalCenter: parent.horizontalCenter
+                font.pixelSize: Theme.fontSizeSmall
+                text: qsTr("https://github.com/mjtorn/manasail/")
             }
         }
     }
