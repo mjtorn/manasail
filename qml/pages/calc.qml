@@ -133,7 +133,7 @@ Page {
         id: summary
         width: calcPage.width
         anchors.bottom: parent.bottom
-        x: Theme.paddingLarge
+        x: Theme.paddingLarge * 2
     }
 
     Component.onCompleted: MSail.ManaSail.display(summary);
