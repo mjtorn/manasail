@@ -63,7 +63,7 @@ Page {
             }
             Label {
                 x: Theme.paddingLarge
-                text: qsTr("Select game type")
+                text: qsTr("Select game format")
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontFamilyHeading
             }
@@ -72,13 +72,13 @@ Page {
                 id: btnLimited
                 x: Theme.paddingLarge
                 text: qsTr("Limited")
-                onClicked: ManaSail.setGameType("limited")
+                onClicked: ManaSail.setGameFormat("limited")
             }
             Button {
                 id: btnConstructed
                 x: Theme.paddingLarge
                 text: qsTr("Constructed")
-                onClicked: ManaSail.setGameType("constructed")
+                onClicked: ManaSail.setGameFormat("constructed")
             }
         }
     }
