@@ -31,6 +31,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+import "../manasail.js" as ManaSail
 
 Page {
     id: page
@@ -62,12 +63,23 @@ Page {
             }
             Label {
                 x: Theme.paddingLarge
-                text: qsTr("Hello Sailors")
+                text: qsTr("Select game type")
                 color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeExtraLarge
+                font.pixelSize: Theme.fontFamilyHeading
+            }
+
+            Button {
+                id: btnLimited
+                x: Theme.paddingLarge
+                text: qsTr("Limited")
+                onClicked: ManaSail.setGameType("limited")
+            }
+            Button {
+                id: btnConstructed
+                x: Theme.paddingLarge
+                text: qsTr("Constructed")
+                onClicked: ManaSail.setGameType("constructed")
             }
         }
     }
 }
-
-
