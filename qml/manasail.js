@@ -39,7 +39,15 @@ var ManaSail = (function(formats, data) {
         'black': 0
     }
 
-    function resetManaBase() {
+    function resetStates() {
+        data.counts = {
+            'land': 0,
+            'white': 0,
+            'red': 0,
+            'green': 0,
+            'blue': 0,
+            'black': 0
+        }
         data.manaBase = {
             'white': 0,
             'red': 0,
@@ -55,7 +63,6 @@ var ManaSail = (function(formats, data) {
             console.error("Unknown game type", gameFormat);
             return;
         }
-        resetManaBase();
         data.counts['land'] = data.format['dflLandCount'];
     }
     function getGameFormat() {
@@ -97,6 +104,7 @@ var ManaSail = (function(formats, data) {
     }
 
     return {
+        'resetStates': resetStates,
         'setGameFormat': setGameFormat,
         'getGameFormat': getGameFormat,
         'setCount': setCount,

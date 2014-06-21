@@ -5,6 +5,9 @@ import "../manasail.js" as MSail
 
 Page {
     id: calcPage
+    onStatusChanged: if (calcPage.status === PageStatus.Inactive) {
+                         MSail.ManaSail.resetStates();
+                     }
 
     SilicaFlickable {
         id: calcFlickable
