@@ -31,7 +31,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-import "../manasail.js" as ManaSail
+import "../manasail.js" as MSail
 
 Page {
     id: page
@@ -72,13 +72,19 @@ Page {
                 id: btnLimited
                 x: Theme.paddingLarge
                 text: qsTr("Limited")
-                onClicked: ManaSail.setGameFormat("limited")
+                onClicked: (function() {
+                    MSail.ManaSail.setGameFormat("limited");
+                    pageStack.push(Qt.resolvedUrl("calc.qml"));
+                })()
             }
             Button {
                 id: btnConstructed
                 x: Theme.paddingLarge
                 text: qsTr("Constructed")
-                onClicked: ManaSail.setGameFormat("constructed")
+                onClicked: (function() {
+                    MSail.ManaSail.setGameFormat("constructed");
+                    pageStack.push(Qt.resolvedUrl("calc.qml"));
+                })()
             }
         }
     }
