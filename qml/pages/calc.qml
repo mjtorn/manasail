@@ -11,7 +11,7 @@ Page {
 
     SilicaFlickable {
         id: calcFlickable
-        contentHeight: calcColumn.height
+        contentHeight: header.height + landContainer.height + separator.height + whiteContainer.height + redContainer.height + greenContainer.height + blueContainer.height + blackContainer.height
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
@@ -23,19 +23,20 @@ Page {
             flickable: calcFlickable
         }
 
-        Column {
-            id: calcColumn
-            width: calcPage.width
-            spacing: Theme.paddingLarge
+        PageHeader {
+            id: header
+            title: qsTr("Calculate mana base")
+        }
 
-            PageHeader {
-                title: qsTr("Calculate mana base")
-            }
-
+        Item {
+            id: landContainer
+            height: landSlider.height + landPlus5.height
+            anchors.top: header.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
             Slider {
                 id: landSlider // :D
                 label: qsTr("Land count")
-                width: calcPage.width
                 stepSize: 1
                 minimumValue: MSail.ManaSail.getGameFormat()['minLandCount']
                 maximumValue: MSail.ManaSail.getGameFormat()['maxLandCount']
@@ -46,7 +47,37 @@ Page {
                     MSail.ManaSail.calculate();
                     MSail.ManaSail.display(summary);
                 }
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: landPlus5.left
+                anchors.rightMargin: 0
             }
+
+            Button {
+                id: landPlus5
+                text: "+5"
+                width: Theme.fontSizeSmall * 2
+                onClicked: {
+                    landSlider.maximumValue += 5;
+                }
+                anchors.top: parent.top
+                anchors.topMargin: landSlider.height / 5
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingLarge * 3
+            }
+        }
+
+        Separator {
+            id: separator
+            anchors.top: landContainer.bottom
+        }
+
+        Item {
+            id: whiteContainer
+            height: whiteSlider.height
+            anchors.top: separator.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
 
             Slider {
                 id: whiteSlider
@@ -62,7 +93,32 @@ Page {
                     MSail.ManaSail.calculate();
                     MSail.ManaSail.display(summary);
                 }
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: whitePlus5.left
+                anchors.rightMargin: 0
             }
+
+            Button {
+                id: whitePlus5
+                text: "+5"
+                width: Theme.fontSizeSmall * 2
+                onClicked: {
+                    whiteSlider.maximumValue += 5;
+                }
+                anchors.top: parent.top
+                anchors.topMargin: whiteSlider.height / 5
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingLarge * 3
+            }
+        }
+
+        Item {
+            id: redContainer
+            height: redSlider.height
+            anchors.top: whiteContainer.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
 
             Slider {
                 id: redSlider
@@ -78,7 +134,32 @@ Page {
                     MSail.ManaSail.calculate();
                     MSail.ManaSail.display(summary);
                 }
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: redPlus5.left
+                anchors.rightMargin: 0
             }
+
+            Button {
+                id: redPlus5
+                text: "+5"
+                width: Theme.fontSizeSmall * 2
+                onClicked: {
+                    redSlider.maximumValue += 5;
+                }
+                anchors.top: parent.top
+                anchors.topMargin: redSlider.height / 5
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingLarge * 3
+            }
+        }
+
+        Item {
+            id: greenContainer
+            height: greenSlider.height
+            anchors.top: redContainer.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
 
             Slider {
                 id: greenSlider
@@ -94,7 +175,32 @@ Page {
                     MSail.ManaSail.calculate();
                     MSail.ManaSail.display(summary);
                 }
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: greenPlus5.left
+                anchors.rightMargin: 0
             }
+
+            Button {
+                id: greenPlus5
+                text: "+5"
+                width: Theme.fontSizeSmall * 2
+                onClicked: {
+                    greenSlider.maximumValue += 5;
+                }
+                anchors.top: parent.top
+                anchors.topMargin: greenSlider.height / 5
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingLarge * 3
+            }
+        }
+
+        Item {
+            id: blueContainer
+            height: blueSlider.height
+            anchors.top: greenContainer.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
 
             Slider {
                 id: blueSlider
@@ -110,7 +216,32 @@ Page {
                     MSail.ManaSail.calculate();
                     MSail.ManaSail.display(summary);
                 }
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: bluePlus5.left
+                anchors.rightMargin: 0
             }
+
+            Button {
+                id: bluePlus5
+                text: "+5"
+                width: Theme.fontSizeSmall * 2
+                onClicked: {
+                    blueSlider.maximumValue += 5;
+                }
+                anchors.top: parent.top
+                anchors.topMargin: blueSlider.height / 5
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingLarge * 3
+            }
+        }
+
+        Item {
+            id: blackContainer
+            height: blackSlider.height
+            anchors.top: blueContainer.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
 
             Slider {
                 id: blackSlider
@@ -126,8 +257,24 @@ Page {
                     MSail.ManaSail.calculate();
                     MSail.ManaSail.display(summary);
                 }
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: blackPlus5.left
+                anchors.rightMargin: 0
             }
 
+            Button {
+                id: blackPlus5
+                text: "+5"
+                width: Theme.fontSizeSmall * 2
+                onClicked: {
+                    blackSlider.maximumValue += 5;
+                }
+                anchors.top: parent.top
+                anchors.topMargin: blackSlider.height / 5
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingLarge * 3
+            }
         }
     }
     Label {
