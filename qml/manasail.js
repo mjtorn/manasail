@@ -102,7 +102,7 @@ var ManaSail = (function(formats, data) {
             s += dispKey + ': ' + Math.round(val) + ' (' + val.toFixed(2) + ')' + '\n';
         }
 
-        label.text = s;
+        label.text = s.slice(0, s.length-1);
     }
 
     function coverText() {
