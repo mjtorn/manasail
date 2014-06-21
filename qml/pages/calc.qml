@@ -16,6 +16,7 @@ Page {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: summary.top
+        anchors.bottomMargin: Theme.paddingLarge
         clip: true
 
         ScrollDecorator {
