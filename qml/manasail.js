@@ -39,12 +39,23 @@ var ManaSail = (function(formats, data) {
         'black': 0
     }
 
+    function resetManaBase() {
+        data.manaBase = {
+            'white': 0,
+            'red': 0,
+            'green': 0,
+            'blue': 0,
+            'black': 0
+        }
+    }
+
     function setGameFormat(gameFormat) {
         data.format = data.formats[gameFormat];
         if (data.format == null) {
             console.error("Unknown game type", gameFormat);
             return;
         }
+        resetManaBase();
         data.counts['land'] = data.format['dflLandCount'];
     }
     function getGameFormat() {
