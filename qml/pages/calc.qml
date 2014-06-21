@@ -11,8 +11,8 @@ Page {
 
     SilicaFlickable {
         id: calcFlickable
-        anchors.fill: parent;
-        contentHeight: calcColumn.height
+        anchors.top: parent.top
+        anchors.bottom: summary.top
 
         ScrollDecorator {
             flickable: calcFlickable
@@ -123,12 +123,13 @@ Page {
                 }
             }
 
-            Label {
-                id: summary
-                width: calcPage.width
-            }
-
-            Component.onCompleted: MSail.ManaSail.display(summary);
         }
     }
+    Label {
+        id: summary
+        width: calcPage.width
+        anchors.bottom: calcPage.bottom
+    }
+
+    Component.onCompleted: MSail.ManaSail.display(summary);
 }
