@@ -72,19 +72,19 @@ Page {
                 id: btnLimited
                 x: Theme.paddingLarge
                 text: qsTr("Limited")
-                onClicked: (function() {
+                onClicked: {
                     MSail.ManaSail.setGameFormat("limited");
                     pageStack.push(Qt.resolvedUrl("calc.qml"));
-                })()
+                }
             }
             Button {
                 id: btnConstructed
                 x: Theme.paddingLarge
                 text: qsTr("Constructed")
-                onClicked: (function() {
+                onClicked: {
                     MSail.ManaSail.setGameFormat("constructed");
                     pageStack.push(Qt.resolvedUrl("calc.qml"));
-                })()
+                }
             }
         }
     }
