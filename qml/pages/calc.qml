@@ -124,6 +124,8 @@ Page {
                 id: summary
                 width: calcPage.width
             }
+
+            Component.onCompleted: MSail.ManaSail.display(summary);
         }
     }
 }
