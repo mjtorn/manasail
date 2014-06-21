@@ -86,6 +86,15 @@ Page {
                     pageStack.push(Qt.resolvedUrl("calc.qml"));
                 }
             }
+            Button {
+                id: btnConstructedMono
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: qsTr("Constructed Large")
+                onClicked: {
+                    MSail.ManaSail.setGameFormat("constructed_large");
+                    pageStack.push(Qt.resolvedUrl("calc.qml"));
+                }
+            }
         }
     }
 }

@@ -11,6 +11,11 @@ var gameFormats = {
         'minLandCount': 0,
         'maxLandCount': 30,
         'dflLandCount': 24
+    },
+    "constructed_large": {
+        'minLandCount': 0,
+        'maxLandCount': 40,
+        'dflLandCount': 24
     }
 }
 
