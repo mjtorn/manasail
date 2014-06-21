@@ -28,9 +28,13 @@ var ManaSail = (function(formats, data) {
             return;
         }
     }
+    function getGameFormat() {
+        return data.format;
+    }
 
     return {
-        'setGameFormat': setGameFormat
+        'setGameFormat': setGameFormat,
+        'getGameFormat': getGameFormat
     }
 }(gameFormats, {})); // Cannot assign to global scope so pass an array
 
