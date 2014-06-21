@@ -63,7 +63,7 @@ Page {
             }
             Label {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Select game format")
+                text: qsTr("Select format preset")
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontFamilyHeading
             }
