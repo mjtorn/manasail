@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 X-Nemo-Application-Type=silica-qt5
-Name=manasail
-Icon=manasail
-Exec=manasail
+Name=harbour-manasail
+Icon=harbour-manasail
+Exec=harbour-manasail
 
