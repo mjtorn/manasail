@@ -10,20 +10,19 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = manasail
+TARGET = harbour-manasail
 
 CONFIG += sailfishapp
 
 SOURCES += src/manasail.cpp
 
-OTHER_FILES += qml/manasail.qml \
+OTHER_FILES += qml/harbour-manasail.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
     rpm/manasail.changes.in \
-    rpm/manasail.spec \
     rpm/manasail.yaml \
     translations/*.ts \
-    manasail.desktop \
+    harbour-manasail.desktop \
     qml/pages/about.qml \
     qml/manasail.js \
     qml/pages/calc.qml
