@@ -43,7 +43,7 @@ Page {
             spacing: Theme.paddingLarge
 
             PageHeader {
-                title: qsTr("ManaSail 1.0")
+                title: qsTr("ManaSail 1.1")
             }
             Label {
                 anchors.horizontalCenter: parent.horizontalCenter
