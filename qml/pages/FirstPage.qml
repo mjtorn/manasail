@@ -95,6 +95,15 @@ Page {
                     pageStack.push(Qt.resolvedUrl("calc.qml"));
                 }
             }
+            Button {
+                id: btnConstructedHighlander
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: qsTr("Highlander")
+                onClicked: {
+                    MSail.ManaSail.setGameFormat("highlander");
+                    pageStack.push(Qt.resolvedUrl("calc.qml"));
+                }
+            }
         }
     }
 }

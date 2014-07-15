@@ -16,6 +16,11 @@ var gameFormats = {
         'minLandCount': 0,
         'maxLandCount': 40,
         'dflLandCount': 24
+    },
+    "highlander": {
+        'minLandCount': 0,
+        'maxLandCount': 100,
+        'dflLandCount': 40
     }
 }
 
